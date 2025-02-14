@@ -53,7 +53,11 @@ function App() {
 
   return (
     
-    <> <a href="#"><img  src="public/logo.png" className="mx-3 mt-3"></img></a> 
+    <> 
+    {/* <a href="#"><img  src="public/logo.png" className="mx-3 mt-3"></img></a> 
+     */}
+     <a href="#"><img src="/logo.png" className="mx-3 mt-3" alt="Logo" /></a>
+
       <div className="container mt-5 ">
       {!loading && !results && (
         <div className="container form-container ">
