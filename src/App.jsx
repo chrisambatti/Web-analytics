@@ -52,13 +52,13 @@ function App() {
   }, [results]);
 
   return (
-    <>
-      <div className="container mt-5 .bg-dark">
-      {!loading && (
-        <div className="container form-container .bg-dark">
+    <> <img  src="public/logo.png" className="mx-3 mt-3"></img>
+      <div className="container mt-5 ">
+      {!loading && !results && (
+        <div className="container form-container ">
           <div className="card shadow">
             <div className="card-body">
-              <h1 className="card-title text-center mb-4">Website Analyzer</h1>
+              <h1 className="card-title text-center mb-4">How Strong Is Your Digital Presence? <br /> Find Out in Seconds!</h1>
               <form onSubmit={handleSubmit}>
                   <div className="mb-3" >
                     <label htmlFor="Website" className="form-label">Website</label>
@@ -72,7 +72,7 @@ function App() {
                       className="form-control"
                     />
                   </div>
-                <button type="submit" className="btn btn-primary w-100 .text-info" >
+                <button type="submit" className="btn btn-primary w-100 .text-info bg-info " >
                   Analyze
                 </button>
               </form>
@@ -82,24 +82,32 @@ function App() {
       )}
       {/* loading screen */}
       {loading && (
-        <div className="text-center mt-4">
-          <div className="spinner-border text-primary" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-          <p>Analyzing... Please wait.</p>
-        </div>
-      )}
+  <div className="d-flex flex-column align-items-center justify-content-center  ">
+    <div className="spinner-border text-primary" style={{ width: "4rem", height: "4rem" }} role="status">
+      <span className="visually-hidden">Loading...</span>
+    </div>
+    <p className="text-light mt-3 fs-5 fw-medium">Analyzing... Please wait.</p>
+  </div>
+)}
+
 
       {/* result screen */}
       {results && !loading && (
         <div className="col-md-12 summary-container mt-4">
           <div className="container">
             <ScoreCard score={results} />
+            <a href="https://ufbdigitaledge.com/#contact" className="btn btn-primary mx-auto d-block my-2 bg-info ">Boost My Digital health</a>
           </div>
+          <footer className="text-center mt-3 text-light">
+          © Copyright 2025 <span className="text-info"> UFB Digitaledge </span>
+          </footer>
         </div>
+        
       )}
+      
     </div>
-    </>
+    
+    </> 
   )
 }
 

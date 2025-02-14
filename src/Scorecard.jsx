@@ -18,8 +18,8 @@ const ScoreCard = ({ score }) => {
   };
 
   return (
-    <div className="container mt-4">
-      <h2 className="text-center mb-4">Website Analysis Score</h2>
+    <div className="container mt-4 " >
+      <h2 className="text-center text-light mb-4">Website Analysis Score</h2>
       <div className="row">
         {categories.map((category, index) => (
           <div key={index} className="col-md-3 col-sm-6 mb-4">
@@ -37,7 +37,7 @@ const ScoreCard = ({ score }) => {
             </div>
           </div>
         ))}
-         <div className="mx-auto col-md-6 col-sm-6 mb-4">
+         <div className="mx-auto col-md-4 col-sm-6 mb-4">
             <div className="card shadow text-center p-3">
               <h5 className="mb-3 text-capitalize">Overall Rating</h5>
               <CircularProgressbar
@@ -52,7 +52,9 @@ const ScoreCard = ({ score }) => {
             </div>
           </div>
       </div>
+    
     </div>
+    
   );
 };
 
