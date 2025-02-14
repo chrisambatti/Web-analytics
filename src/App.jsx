@@ -52,7 +52,8 @@ function App() {
   }, [results]);
 
   return (
-    <> <img  src="public/logo.png" className="mx-3 mt-3"></img>
+    
+    <> <a href="#"><img  src="/logo.png" className="mx-3 mt-3"></img></a> 
       <div className="container mt-5 ">
       {!loading && !results && (
         <div className="container form-container ">
@@ -99,7 +100,8 @@ function App() {
             <a href="https://ufbdigitaledge.com/#contact" className="btn btn-primary mx-auto d-block my-2 bg-info ">Boost My Digital health</a>
           </div>
           <footer className="text-center mt-3 text-light">
-          © Copyright 2025 <span className="text-info"> UFB Digitaledge </span>
+            
+          © Copyright 2025 <a href="https://ufbdigitaledge.com/" className="text-info"> UFB Digitaledge </a>
           </footer>
         </div>
         
