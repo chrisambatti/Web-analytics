@@ -58,9 +58,9 @@ function App() {
      */}
      <a href="#"><img src="/logo.png" className="mx-3 mt-3" alt="Logo" /></a>
 
-      <div className="container mt-5 ">
+      <div className="container-fluid mt-5 ">
       {!loading && !results && (
-        <div className="container form-container ">
+        <div className="container-fluid form-container ">
           <div className="card shadow">
             <div className="card-body">
               <h1 className="card-title text-center mb-4">How Strong Is Your Digital Presence? <br /> Find Out in Seconds!</h1>
@@ -99,10 +99,18 @@ function App() {
       {/* result screen */}
       {results && !loading && (
         <div className="col-md-12 summary-container mt-4">
-          <div className="container">
-            <ScoreCard score={results} />
-            <a href="https://ufbdigitaledge.com/#contact" className="btn btn-primary mx-auto d-block my-2 bg-info ">Boost My Digital health</a>
-          </div>
+          <div className="container text-center">
+    <ScoreCard score={results} />
+    
+    <div className="d-flex justify-content-center align-items-center gap-3 my-2">
+        <a href="https://ufbdigitaledge.com/#contact" className="btn btn-primary bg-info">
+            Boost My Digital Health
+        </a>
+        <a href="https://ufbdigitaledge.com/" className="text-light text-decoration-none custom-hover">
+            No Thanks, I’m Good with Poor Health
+        </a>
+    </div>
+</div>
           <footer className="text-center mt-3 text-light">
             
           © Copyright 2025 <a href="https://ufbdigitaledge.com/" className="text-info"> UFB Digitaledge </a>
@@ -118,3 +126,4 @@ function App() {
 }
 
 export default App
+
