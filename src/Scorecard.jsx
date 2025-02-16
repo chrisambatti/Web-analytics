@@ -3,7 +3,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const ScoreCard = ({ score }) => {
+const ScoreCard = ({ score,website }) => {
     console.log(score);
     
   const categories = ["seo", "performance", "accessibility", "isMobileResponsive"];
@@ -14,12 +14,14 @@ const ScoreCard = ({ score }) => {
   const getColor = (value) => {
     if (value >= 80) return "#4CAF50"; // Green for good
     if (value >= 50) return "#FFC107"; // Yellow for average
-    return "#F44336"; // Red for bad
+    return "#F44336"; // Red for bad  
   };
 
   return (
     <div className="container-fluid mt-4 " >
-      <h2 className="text-center text-light mb-4">Website Analysis Score</h2>
+      <h2 className="text-center text-light mb-2">Website Analysis Score </h2>
+      <h4 className="text-light text-center">{website}</h4>
+      
       <div className="row w-100">
         <div className="col-md-6">
           <div className="row">
