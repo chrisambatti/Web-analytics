@@ -105,7 +105,7 @@ function App() {
                       className="form-control"
                     />
                   </div>
-                  <button type="submit" className="btn btn-primary w-100 text-info bg-info">
+                  <button type="submit" className="btn text-light w-100 text-info bg-info">
                     Analyze
                   </button>
                 </form>
