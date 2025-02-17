@@ -140,7 +140,7 @@ function App() {
             </div>
             <footer className="text-center mt-3 text-light">
               © Copyright 2025{" "}
-              <a href="https://ufbdigitaledge.com/" className="text-info">
+              <a href="https://ufbdigitaledge.com/" className="text-info text-decoration-none">
                 {" "}
                 UFB Digitaledge{" "}
               </a>
