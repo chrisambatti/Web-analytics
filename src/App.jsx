@@ -10,7 +10,7 @@ function App() {
   const [error, setError] = useState(null);
 
   // Regex pattern: Only allow "www.xyz.com" format (without https://)
-  const domainPattern = /^www\.[a-zA-Z0-9-]+\.(com|io|ai|net|gov|org|in|co.in)$/;
+  const domainPattern = /^www\.[a-zA-Z0-9-]+\.(com|uk|us|ca|au|ir|de|ae|io|ai|net|gov|org|in|co.in)$/;
 
   const validateDomain = (input) => {
     return domainPattern.test(input);
@@ -33,10 +33,13 @@ function App() {
     e.preventDefault();
     setError(null);
 
-    if (!validateDomain(inputs)) {
-      alert("Invalid domain! Please enter in the format: www.example.com");
+    if (String(URL).includes("https") || String(URL).includes("http")) {
+      if (validateDomain(inputs)) {
+        alert("Invalid Domain");
+      }
       return;
     }
+    
 
     setLoading(true);
     const apiKey = "AIzaSyDalQnbFCoO68x_o1unsfpGR27OWAlFC44";
